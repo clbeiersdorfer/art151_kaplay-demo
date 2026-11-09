@@ -30,11 +30,15 @@ nn.on('load', () => {
  
  //text
   add([
-    text("oh [p]hi[/p]", {
+    text("oh [blue]hi[/blue]", {
         size: 48, // 48 pixels tall
         width: 300, // it'll wrap to next line when width exceeds this value
         font: "sans-serif", // specify any font you loaded or browser built-in
-     //styles: p<color:(255,255,255)>
+   styles: {
+                "blue": {
+                    color: rgb(0, 110, 255),
+                }
+   }
      }),
     color(0,255,0),
     pos(200,600), 
