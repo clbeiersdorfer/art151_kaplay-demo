@@ -1,0 +1,36 @@
+<script src="https://cdn.jsdelivr.net/gh/netizenorg/netnet-standard-library@1.0.1/build/nn.min.js"></script>
+<script src="https://unpkg.com/kaplay@3001.0.19/dist/kaplay.js"></script>
+<script>
+nn.on('load', () => {
+
+  kaplay({
+    focus: false,
+    background:"#d46eb3"
+    //background: [255,0,255]
+  })
+
+  const player = add([
+    rect(60, 32),
+    pos(100, 100),
+    area(),
+    color(100, 200, 255),
+    'player'
+  ])
+ 
+
+  onKeyDown('right', () => {
+    player.move(200, 0)
+  })
+
+  onKeyDown('left', () => {
+    player.move(-200, 0)
+  })
+  
+  onKeyDown('up', () => {
+    player.move(0, -200)
+  })
+  onKeyDown('down', () => {
+    player.move(0, 200)
+  })
+})
+</script>
