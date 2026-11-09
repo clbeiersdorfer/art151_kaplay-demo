@@ -24,7 +24,19 @@ nn.on('load', () => {
     'bean'
 ]);
  
-  bean.play("jump")
+ //text
+  add([
+    text("oh hi", {
+        size: 48, // 48 pixels tall
+        width: 300, // it'll wrap to next line when width exceeds this value
+        font: "sans-serif", // specify any font you loaded or browser built-in
+     }),
+    color(0,255,0),
+    pos(200,600)
+   
+  ])
+  
+   
 
   
   ///controls
@@ -37,7 +49,8 @@ nn.on('load', () => {
   })
   
   onKeyDown('up', () => {
-    bean.move(0, -200)
+   bean.move(0, -200)
+      
   })
   onKeyDown('down', () => {
     bean.move(0, 200)
